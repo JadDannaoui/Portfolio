@@ -289,6 +289,28 @@ img {
 .home__scroll-arrow{
   font-size: 1.25rem;
 }
+.home__title, .home__description, .button-home {
+  animation: wipe-down--text-fade 2s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.home__social-icon {
+  animation: float-in 1s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(60px);
+}
+.home__social-icon:nth-child(1) { animation-delay: 0.2s; }
+.home__social-icon:nth-child(2) { animation-delay: 0.4s; }
+@keyframes wipe-down--text-fade {
+  0% { opacity: 0; transform: translateY(-250px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float-in {
+  0% { opacity: 0; transform: translateY(160px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 /*==================== BUTTONS ====================*/
 .button{
   display: inline-block;
@@ -360,11 +382,13 @@ img {
 }
 .about__img{
   width: 350px;
-  background-image: linear-gradient(to bottom, #00000000 60%, #121617), url(../img/avatar.png);
+  /* background-image: linear-gradient(to bottom, #00000000 60%, #121617), url(../img/avatar.png);
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   height: 100%;
-  border-radius: .5rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px var(--first-color);
+  object-fit: cover;
   justify-self: center;
   align-self: center;
 }
@@ -393,6 +417,9 @@ img {
 .about__buttons{
   display: flex;
   justify-content: center;
+}
+.aos-animate {
+  opacity: 1 !important;
 }
 /*==================== SKILLS ====================*/
 .skills__container{
