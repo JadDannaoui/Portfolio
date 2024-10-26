@@ -7,12 +7,15 @@
         <link rel="stylesheet" href="assets/css/styles.css">
         <title>Jad Dannaoui's Portfolio</title>
         
-        <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-<script type="text/javascript">
-  emailjs.init('XjMaQF8I4DkZrhf5p')
-</script>
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript"> 
+            emailjs.init('XjMaQF8I4DkZrhf5p')
+        </script>
 
     </head>
     <body class="dark-theme">
@@ -80,23 +83,23 @@
                 </div>
             </section>
             <section class="about section" id="about" data-id="about">
-                <div class="about__container  grid">
-                    <div class="about__data">
-                        <h2 class="about__title">About Me</h2>
+                <div class="about__container  grid" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="about__data" data-aos="fade-left" data-aos-duration="2000">
+                        <h2 class="about__title" >About Me</h2>
                         <span class="about__subtitle">jaddannaoui7@gmail.com</span>
                         <p class="about__description">Highly motivated Mechanical Engineer with extensive experience in optimizing machinery and production processes. Proficient in renewable energy systems and lean manufacturing techniques. Skilled in CAD design, FEA analysis, and troubleshooting mechanical systems. Proven ability to deliver cost-effective engineering solutions that increase efficiency and minimize downtime. Eager to contribute technical expertise to challenging mechanical projects.</p>
                     </div>
-                    <div class="about__img"></div>
-                    <!-- <img src="assets/img/avatar.png" alt="Avatar" class="about__img"> -->
+                    <!-- <div class="about__img"></div> -->
+                    <img src="assets/img/avatar.png" alt="Avatar" class="about__img" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500">
                 </div>
             </section>
             <section class="skills section" id="skills" data-id="skills">
-                <h2 class="section__title">Languages & Skills</h2>
-                <span class="section__subtitle">General & Technical Competence</span>
+                <h2 class="section__title" data-aos="fade-down" data-aos-duration="2000">Languages & Skills</h2>
+                <span class="section__subtitle" data-aos="fade-down" data-aos-duration="2000">General & Technical Competence</span>
                 <div class="skills__container container grid">
                     <div>
-                        <div class="skills__content skills__open">
-                            <div class="skills__header">
+                        <div class="skills__content skills__close">
+                            <div class="skills__header" data-aos="fade-right" data-aos-duration="2000">
                                 <i class="uil uil-brackets-curly skills__icon"></i>
                                 <div>
                                     <h1 class="skills__titles">Languages</h1>
@@ -125,7 +128,7 @@
                             </div>
                         </div>
                         <div class="skills__content skills__close">
-                            <div class="skills__header">
+                            <div class="skills__header" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="250">
                                 <i class="uil uil-vector-square skills__icon"></i>
                                 <div>
                                     <h1 class="skills__titles">Soft Skills</h1>
@@ -158,7 +161,7 @@
                     </div>
                     <div>
                         <div class="skills__content skills__close">
-                            <div class="skills__header">
+                            <div class="skills__header" data-aos="fade-left" data-aos-duration="2000">
                                 <i class="uil uil-arrow skills__icon"></i>
                                 <div>
                                     <h1 class="skills__titles">Engineering Processes</h1>
@@ -194,7 +197,7 @@
                             </div>
                         </div>  
                         <div class="skills__content skills__close">
-                            <div class="skills__header">
+                            <div class="skills__header" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="250">
                                 <i class="uil uil-code-branch skills__icon"></i>
                                 <div>
                                     <h1 class="skills__titles">Project Management</h1>
@@ -219,16 +222,16 @@
             </section>
             <section class="qualification section"> 
                 <section class="anon section" id="anon" data-id="anon"></section>
-                <h2 class="section__title">
+                <h2 class="section__title" data-aos="fade-up" data-aos-duration="2000">
                     <i class="uil uil-graduation-cap qualification__icon"></i>
                     Education
                 </h2>
-                <span class="section__subtitle">Academic Career</span>
+                <span class="section__subtitle" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">Academic Career</span>
                 <div class="qualification__container container">
                     <div class="qualification__sections">
                         <div class="qualification__content qualification__active" data-content id="work">
                             <div class="qualification__data">
-                               <div>
+                               <div data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="300">
                                    <h3 class="qualification__tittle">Master's in Computational Engineering</h3>
                                    <span class="qualification__subtitle">Lebanese University</span>
                                    <div class="qualification__calendar">
@@ -247,7 +250,7 @@
                                    <span class="qualification__rounder"></span>
                                    <span class="qualification__line"></span>
                                </div>
-                               <div>
+                               <div data-aos="fade-down-right" data-aos-duration="2000" data-aos-delay="400">
                                    <h3 class="qualification__tittle">Bachelor’s Degree in Mechanical Engineering</h3>
                                    <span class="qualification__subtitle">Beirut Arab University</span>
                                    <div class="qualification__calendar">
@@ -465,5 +468,8 @@
         </a>
         <script src="assets/js/swiper-bundle.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            AOS.init();
+        </script>        
     </body>
 </html>
