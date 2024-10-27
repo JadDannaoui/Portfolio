@@ -220,7 +220,7 @@ img {
 .home_bg{
   background-image: linear-gradient(to bottom, #00000000 70%, #121617), url(../img/home.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100vw;
 }
 .home__title{
