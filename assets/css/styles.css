@@ -1145,4 +1145,7 @@ img {
   .about__img {
     height: 70%;
   }
+  .about__description{
+    font-size: 1rem
+  }
 }
