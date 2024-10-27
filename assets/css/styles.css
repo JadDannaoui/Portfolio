@@ -1146,4 +1146,7 @@ img {
   .about__container{
     margin: 0 1rem;
   }
+  .about__img {
+    height: 70%;
+  }
 }
