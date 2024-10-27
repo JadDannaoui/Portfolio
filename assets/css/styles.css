@@ -80,6 +80,9 @@ body{
 html {
   scroll-behavior: smooth;
 }
+html, body{
+    overflow-x: hidden;
+}
 body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
@@ -224,8 +227,7 @@ img {
 .home_bg{
   background-image: linear-gradient(to bottom, #00000000 70%, #121617), url(../img/home.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 100vh; */
+  background-size: contain;
   width: 100vw;
 }
 .home__title{
@@ -342,6 +344,7 @@ img {
   display: inline-block;
   color: #FFF;
   padding: 0.3rem 2rem;
+  margin-bottom: 1rem;
   border-radius: 2rem;
   border: solid #FFF;
   font-weight: var(--font-medium);
@@ -395,10 +398,6 @@ img {
   margin-bottom: var(--mb-3);
 }
 .about__img{
-  width: 350px;
-  /* background-image: linear-gradient(to bottom, #00000000 60%, #121617), url(../img/avatar.png);
-  background-size: contain;
-  background-repeat: no-repeat; */
   height: 100%;
   border-radius: 50%;
   box-shadow: 0px 4px 10px var(--first-color);
@@ -1120,8 +1119,10 @@ img {
     background-image: linear-gradient(to bottom, #00000000 70%, #121617), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: max-content; */
     width: 100vw;
+  }
+  .home.section {
+    padding: 0;
   }
   .home__content{
     padding-top: 1rem;
@@ -1144,5 +1145,11 @@ img {
   }
   .about__container{
     margin: 0 1rem;
+  }
+  .about__img {
+    height: 70%;
+  }
+  .about__description{
+    font-size: 1rem
   }
 }
