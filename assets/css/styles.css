@@ -221,7 +221,6 @@ img {
   background-image: linear-gradient(to bottom, #00000000 70%, #121617), url(../img/home.png);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100vh;
   width: 100vw;
 }
 .home__title{
@@ -1116,7 +1115,6 @@ img {
     background-image: linear-gradient(to bottom, #00000000 70%, #121617), url(../img/home.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: max-content;
     width: 100vw;
   }
   .home.section {
