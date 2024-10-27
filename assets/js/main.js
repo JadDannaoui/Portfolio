@@ -56,25 +56,100 @@ tabs.forEach(tab =>{
         tab.classList.add('qualification__active')
     })
 })
-/*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.experiences__modal'),
-      modalBtns = document.querySelectorAll('.experiences__button'),
-      modalCloses = document.querySelectorAll('.experiences__modal-close')
-let modal = function(modalClick){
-    modalViews[modalClick].classList.add('active-modal')
-}
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () =>{
-        modal(i)
-    })
-})
-modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () =>{
-        modalViews.forEach((modalView) =>{
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
+/*==================== EXPERIENCES MODAL ====================*/
+const modalBtns = document.querySelectorAll('.experiences__button');
+
+// Define modal content for each button
+const modalsContent = [
+    `
+        <div class="experiences__modal active-modal">
+            <div class="experiences__modal-content">
+                <h4 class="experiences__modal-title">
+                    Research Project – Energy Efficiency
+                    <span style="display: flex; justify-content: space-between;">
+                        <p class="experience_sub">Lebanese University</p>
+                        <div class="experience_sub">
+                            <i class="uil uil-calendar-alt"></i>
+                            Present
+                        </div>
+                    </span>
+                </h4>
+                <i class="uil uil-times experiences__modal-close"></i>
+                <ul class="experiences__modal-experiences grid">
+                    <li class="experiences__modal-project">
+                        <i class="uil uil-check-circle experiences__modal-icon"></i>
+                        <p>Lead a project on integrating Phase Change Materials (PCM) into construction materials for enhanced energy efficiency. Developed and Optimized simulation models to create energy-saving building designs.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>`,
+    `
+        <div class="experiences__modal active-modal">
+            <div class="experiences__modal-content">
+                <h4 class="experiences__modal-title">
+                    Trainee Machinery Technician
+                    <span style="display: flex; justify-content: space-between;">
+                        <p class="experience_sub">MPCF</p>
+                        <div class="experience_sub">
+                            <i class="uil uil-calendar-alt"></i>
+                            Nov 2022 - June 2023
+                        </div>
+                    </span>
+                </h4>
+                <i class="uil uil-times experiences__modal-close"></i>
+                <ul class="experiences__modal-experiences grid">
+                    <li class="experiences__modal-project">
+                        <i class="uil uil-check-circle experiences__modal-icon"></i>
+                        <p>Spearheaded initiatives to optimize tissue paper production, resulting in a 15% reduction in waste and a 10% increase in output.</p>
+                    </li>
+                    <li class="experiences__modal-project">
+                        <i class="uil uil-check-circle experiences__modal-icon"></i>
+                        <p>Conducted troubleshooting of machinery, reducing production line downtime by 20%</p>
+                    </li>
+                    <li class="experiences__modal-project">
+                        <i class="uil uil-check-circle experiences__modal-icon"></i>
+                        <p>Utilized Lean manufacturing principles to streamline processes and improve workflow efficiency.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>`,
+    `
+        <div class="experiences__modal active-modal">
+            <div class="experiences__modal-content">
+                <h4 class="experiences__modal-title">
+                    Vertical axis wind turbine
+                    <span style="display: flex; justify-content: space-between;">
+                        <p class="experience_sub">Independent Project</p>
+                        <div class="experience_sub">
+                            <i class="uil uil-calendar-alt"></i>
+                            2022
+                        </div>
+                    </span>
+                </h4>
+                <i class="uil uil-times experiences__modal-close"></i>
+                <ul class="experiences__modal-experiences grid">
+                    <li class="experiences__modal-project">
+                        <i class="uil uil-check-circle experiences__modal-icon"></i>
+                        <p>Designed and built a vertical axis wind turbine. Focused on optimizing blade shapes and configuration to increase energy output by 30%. Managed data collection and performance analysis for renewable energy research.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>`
+];
+
+// Add click event to each "View More" button
+modalBtns.forEach((modalBtn, index) => {
+    modalBtn.addEventListener('click', () => {
+        // Insert the appropriate modal content based on the button index
+        document.body.insertAdjacentHTML('beforeend', modalsContent[index]);
+
+        // Add close functionality for the modal
+        document.querySelector('.experiences__modal-close').addEventListener('click', () => {
+            document.querySelector('.experiences__modal').remove();
+        });
+    });
+});
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[data-id]')
