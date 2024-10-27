@@ -54,9 +54,9 @@
       --h1-font-size: 1.5rem;
       --h2-font-size: 1.5rem;
       --h3-font-size: 1rem;
-      --normal-font-size: .65rem;
-      --small-font-size: .85rem;
-      --smaller-font-size: .8rem;
+      --normal-font-size: .85rem;
+      --small-font-size: .8rem;
+      --smaller-font-size: .75rem;
   }
 }
 /*========== Variables Dark theme ==========*/
