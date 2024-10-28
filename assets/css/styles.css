@@ -166,14 +166,14 @@ img {
 /* media for navigation */
 @media screen and (max-width: 767px) {
   .nav__logo{
-    font-size: .8rem;
+    font-size: .6rem;
   }
   .nav__list{
     display: flex;
     gap: 5px !important;
   }
   .nav__link, .nav__icon{
-    font-size: .5rem !important;
+    font-size: .65rem !important;
   }
   .home__social{
     visibility: hidden;
