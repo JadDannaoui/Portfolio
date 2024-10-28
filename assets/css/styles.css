@@ -166,7 +166,7 @@ img {
 /* media for navigation */
 @media screen and (max-width: 767px) {
   .nav__logo{
-    font-size: .6rem;
+    font-size: .5rem;
   }
   .nav__list{
     display: flex;
