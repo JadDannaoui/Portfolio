@@ -167,13 +167,14 @@ img {
 @media screen and (max-width: 767px) {
   .nav__logo{
     font-size: .5rem;
+    visibility: hidden;
   }
   .nav__list{
     display: flex;
     gap: 5px !important;
   }
   .nav__link, .nav__icon{
-    font-size: .65rem !important;
+    font-size: .75rem !important;
   }
   .home__social{
     visibility: hidden;
