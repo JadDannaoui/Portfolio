@@ -173,7 +173,7 @@ img {
     gap: 5px !important;
   }
   .nav__link, .nav__icon{
-    font-size: .75rem !important;
+    font-size: .65rem !important;
   }
   .home__social{
     visibility: hidden;
@@ -227,7 +227,7 @@ img {
 .home_bg{
   background-image: linear-gradient(to bottom, #00000000 70%, #121617), url(../img/home.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100vw;
 }
 .home__title{
